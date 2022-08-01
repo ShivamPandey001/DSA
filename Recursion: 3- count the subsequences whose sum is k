@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+int printS(int ind, int arr[], vector<int> &ds,int s,int sum, int n){
+    
+    if(ind == n){
+        //condition satisfies 
+        if(s==sum){
+            return 1;
+        }
+        //condition not satisfies
+        return 0;
+    }
+    // take the particular index
+    ds.push_back(arr[ind]);
+    s+=arr[ind];
+    
+    int l=printS(ind+1,arr,ds,s,sum,n);
+    
+    ds.pop_back();
+    s-=arr[ind];
+    
+    //not take
+    int r = printS(ind+1, arr, ds,s,sum, n);
+    
+    return l+r;
+}
+int main() {
+	// your code goes here
+	int arr[]={1,2,1};
+	int n=3;
+	vector<int> ds;
+	int sum=2;
+	cout<<printS(0,arr,ds,0,sum,n)<<endl;
+	return 0;
+}
