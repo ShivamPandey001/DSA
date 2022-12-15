@@ -28,3 +28,4 @@ int main() {
 	printS(0,arr,ds,0,sum,n);
 	return 0;
 }
+//Noice way to put the code
