@@ -1,0 +1,69 @@
+ ###### BRUTE FORCE METHOD ######
+ TIme complexity=n3;
+
+ CODE-->
+
+ import java.util.*;
+
+public class ArrayCC{
+    public static void maxSubArray(int num[]){
+        int maxSum=Integer.MIN_VALUE;
+        for(int i=0;i<num.length;i++){
+            int start=i;
+            for(int j=i;j<num.length;j++){
+                int end=j;
+                int curSum=0;
+                for(int k=start;k<=end;k++){
+                    curSum+=num[k];
+                }
+            if(curSum>maxSum){
+                maxSum=curSum;
+            }
+            }
+        }
+    }
+    public static void main(String args[]{
+        int num[]={1,2,3,45,66,7,8};
+        System.out.println(maxSubArray(num));
+    })
+} 
+
+
+##### PREFIX SUM ##########
+complexity--O(n2)
+space:O(n)
+public static void maxSubArray(int num[]){
+    int maxSum=Integer.MIN_VALUE;
+    int curSum=0;
+    int prefix[]=new int[num.length];
+    prefix[0]=num[0];
+    for(int i=1;i<num.length;i++){
+        prefix[i]+=prefix[i-1]; //for storing prefix sum in array
+    }
+    for(int i=0;i<num.length;i++){
+        for(int j=i;j<num.length;j++){
+            curSum= i==0?prefix[i]:prefix[j]-prefix[i-1];
+        }
+        if(maxSum<curSum){
+            maxSum=curSum;
+        }
+    }
+}
+
+
+####  KADANE ALGORITHM   #######
+Complexity--O(n);
+Space-->O(1);
+
+public static void maxSubArray(int num[]){
+    int maxSum=Integer.MIN_VALUE;
+    int curSum=0;
+    for(int i=0;i<num.length;i++){
+        curSum+=num[i];
+        if(curSum<num[i]){
+            curSum=num[i];
+        }
+        maxSum=Math.max(curSum,maxSum);
+    }
+}
+
