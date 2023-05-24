@@ -1,0 +1,42 @@
+Hashmap: The pattern where we can store the key and value.
+Key must be unique.
+value can differ the 
+
+Why we use Hashmap::
+1. When a given array is asked for many number of times at that time we can use the Hashmap isntead of array
+2. when the one value is unique and thenwe can change the value accordingly .
+
+
+
+Hashmap-->pres-storing-->fetching
+
+#####################
+can we declare the maximum size of array 10^9 +1????
+no....the maximum size of array whcih we can delcare is the 10^6. if we declare larger than that,
+it will show you segmentattion fault.
+
+
+size            scope           bool
+10^6            local           10^7
+10^7            global          10^8
+
+
+
+
+to hash the char we can use the index as char-'a'. i.e, arr[char-'a']++;
+
+
+time complexity:
+ordered-map::
+pre-store=O(logN).  {best, average, worst}
+fetching=O(logN)     {best, average, worst}
+unordered-map:: in unordered map, the order is not defined 
+pre-store== O(1). {best, average} O(N) {worst }
+fetching=O(1){{best, average}} O(N){worst}
+N is the number of elements in array
+
+
+
+Hashing work flow:  1.Division method
+                    2. Folding method
+                    3. Mid Square method
