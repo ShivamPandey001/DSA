@@ -35,8 +35,19 @@ pre-store== O(1). {best, average} O(N) {worst }
 fetching=O(1){{best, average}} O(N){worst}
 N is the number of elements in array
 
+* most of the time, you have to use the Unordered  map , as it have the average  and best time complexity of O(1),
+if in case , its throwing error as time duration  exceeds, then you need to switch to Ordered Hashmap.
+Time duration exceeds arise because of internal collisions. 
 
+############
 
 Hashing work flow:  1.Division method
                     2. Folding method
                     3. Mid Square method
+
+################
+
+*Division Method: In this method, hashing function creates an array of size 10 and stoe the value
+ according tho their last digit in asc order in linked list format.
+ 
+  

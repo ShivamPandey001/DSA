@@ -1,0 +1,38 @@
+* Package/Library-> java.Util.Hashmap     / java.util.*
+
+* bdeclaration: Hashmap<String, Integer> varname= new Hashmap<>();
+* it will create the data in undordered map
+
+* Insertion: varname.put('India',101);
+
+
+
+* Searching: varname.containsKey("india") -->used for key, return true/false
+
+
+* To get value of Key: varname.get('India');     return value if exist/otehrwise return null
+
+* Traversing in array:
+1. Traversing using index:
+for(int i=0;i<10;++i)
+    {
+        print(arr[i]);
+    }
+2. Traversing using iterator:
+    for(int val:arr){
+        print(val);
+    }
+
+
+* Traversing in Hashmap:
+    for(Map.Entry<Integer, Integer>e: Map.entrySet()){ e is the val as in above array
+        print(e.getKey(),e.getValue());
+    }
+*to make set of key
+    Set<String>keys=map.keySet();
+    for(String key:keys){
+        print(map.get(key));//to get the value of key
+    }
+  
+* to remove the key and value in Hashmap:
+    map.remove('inida');
