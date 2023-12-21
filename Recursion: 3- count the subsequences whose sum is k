@@ -30,3 +30,11 @@ int main() {
 	cout<<printS(0,arr,0,sum,n)<<endl;
 	return 0;
 }
+int main() {
+	// your code goes here
+	int arr[]={1,2,1};
+	int n=3;
+	int sum=2;
+	cout<<printS(0,arr,0,sum,n)<<endl;
+	return 0;
+}
